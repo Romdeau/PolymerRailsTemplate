@@ -1,14 +1,16 @@
 body
-  font: 300 0.85rem Helvetica
-  background: #eee
-  line-height: 1.5rem
-  padding: 0 20px
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial
+  font-size: 14px
+  margin: 0
+  padding: 24px
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-touch-callout: none
 
 .navigation
   font: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
   margin: 0
   list-style: none
-  background: #333333
+  background: #4285f4
 
 .navigation li
   display: inline-block
@@ -21,4 +23,33 @@ body
 
 .navigation li a:hover
   text-decoration: underline
-  background: #272727
+  background: #1d6df2
+
+section
+  padding: 20px 0
+
+
+section > div
+  padding: 14px
+  font-size: 16px
+
+
+paper-button.colored
+  color: #4285f4
+
+
+paper-button[raised].colored
+  background: #4285f4
+  color: #fff
+
+
+paper-button.custom > core-icon
+  margin-right: 4px
+
+
+paper-button.hover:hover
+  background: #eee
+
+
+paper-button.blue-ripple::shadow #ripple
+  color: #4285f4
