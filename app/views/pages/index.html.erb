@@ -1,0 +1,69 @@
+<style shim-shadowdom>
+    body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      font-size: 14px;
+      margin: 0;
+      padding: 24px;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    paper-button.colored {
+      color: #4285f4;
+    }
+
+    paper-button[raised].colored {
+      background: #4285f4;
+      color: #fff;
+    }
+
+    paper-button.custom > core-icon {
+      margin-right: 4px;
+    }
+
+    paper-button.hover:hover {
+      background: #eee;
+    }
+
+    paper-button.blue-ripple::shadow #ripple {
+      color: #4285f4;
+    }
+
+  </style>
+
+<h1>Polymer Rails Example</h1>
+<p>Both of this navigations were implemented using <code>.navigation</code> class to apply styles.
+  But web component's CSS and JavaSctipt are fully encapsulated and do not interact in any way with page's styles and JavaScript.</p>
+
+<label for="">Navigation built in Rails App styled in assets/stylesheets/layout.sass</label>
+<ul class="navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/">Contacts</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/">Twitter</a></li>
+  <li><a href="/">Facebook</a></li>
+</ul>
+<br />
+<label for="">Web Component navigation built with &lt;my-navigation&gt; tag</label>
+<my-navigation></my-navigation>
+<br>
+<div>Flat buttons</div>
+
+    <paper-button>button</paper-button>
+    <paper-button class="colored">colored</paper-button>
+    <paper-button disabled>disabled</paper-button>
+<br>
+<div>Raised buttons</div>
+
+    <paper-button raised>button</paper-button>
+    <paper-button raised class="colored">colored</paper-button>
+    <paper-button raised disabled>disabled</paper-button>
