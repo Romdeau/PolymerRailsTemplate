@@ -7,9 +7,27 @@
   <%= html_import_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-  <%= yield %>
-
+<body fullbleed layout vertical unresolved>
+  <core-header-panel flex>
+    <core-toolbar>
+      <paper-tabs id="tabs" selected="all" self-end>
+        <paper-tab name="polymer">Polymer</paper-tab>
+        <paper-tab name="about">About</paper-tab>
+        <paper-tab name="references">References</paper-tab>
+        <paper-tab name="github">Github</paper-tab>
+        <paper-tab name="facebook">Facebook</paper-tab>
+        <paper-tab name="twitter">Twitter</paper-tab>
+        <paper-tab name="themonstermash">The Monster Mash</paper-tab>
+      </paper-tabs>
+    </core-toolbar>
+    <%= yield %>
+  </core-header-panel>
 </body>
+<script>
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('core-select', function() {
+    console.log("Selected: " + tabs.selected);
+  });
+</script>
 </html>
